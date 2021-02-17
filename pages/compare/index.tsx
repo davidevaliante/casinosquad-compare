@@ -4,7 +4,6 @@ import { BONUSES_BY_NAME, STREAMER_BY_ID } from './../../graphql/queries/bonus';
 import { Bonus } from '../../graphql/schema';
 import styled from 'styled-components';
 import { tablet } from '../../components/Responsive/Breakpoints';
-import { initializeAnalytics } from './../../analytics/base';
 import { cookieContext } from '../../context/CookieContext';
 import CookieDisclaimer from '../../components/CookieDisclaimer/CookieDisclaimer';
 import VideoDiscalimer from '../../components/VideoDisclaimer/VideoDisclaimer';
