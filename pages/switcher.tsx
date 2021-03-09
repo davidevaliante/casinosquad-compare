@@ -55,11 +55,16 @@ const switcher : FunctionComponent<Props> = ({cStreamer}) => {
     }
 
     const handleChange = (newValue : string) => {
-        setCurrentStreamer({
-            //@ts-ignore
-            id : streamers.find(s => s.alias === newValue)?.id,
-            alias : newValue
-        })
+        if(streamers.find(s => s.alias === newValue) !== undefined){
+            const s = streamers.find(s => s.alias === newValue)
+
+            setCurrentStreamer({
+                id : s ? s.id : 1,
+                alias : newValue
+            })
+        } 
+
+       
     }
 
     const handleConfirm = async () => {
