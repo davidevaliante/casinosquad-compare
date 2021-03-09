@@ -68,7 +68,7 @@ const switcher : FunctionComponent<Props> = ({cStreamer}) => {
     }
 
     const handleConfirm = async () => {
-        const r = await axios.post(`https://https://casinosquad.toply.info/api/switch`, {
+        const r = await axios.post(`https://casinosquad.toply.info/api/switch`, {
             timeout : resetTime,
             streamerName : currentStreamer.alias,
             streamerId : currentStreamer.id
@@ -76,7 +76,7 @@ const switcher : FunctionComponent<Props> = ({cStreamer}) => {
     }
 
     const handleReset = async () => {
-        const r = await axios.get(`https://https://casinosquad.toply.info/api/reset`)
+        const r = await axios.get(`https://casinosquad.toply.info/api/reset`)
     }
 
     if(loading) return <FullPageLoader />

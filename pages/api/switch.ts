@@ -22,7 +22,7 @@ export default (req, res) => {
 
     setTimeout(async () => {
         try {
-            await axios.get(`http://localhost:3000/api/reset`)
+            await axios.get(`https://casinosquad.toply.info/api/reset`)
         } catch (error) {
             console.log(error)
         }
