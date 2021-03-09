@@ -164,7 +164,7 @@ export const materialTheme = createMuiTheme({
     },
     typography: {
         fontFamily: [
-            '"Raleway"',
+            configuration.font,
         ].join(','),
     },
 });

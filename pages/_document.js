@@ -40,7 +40,7 @@ export default class Document extends NextDocument {
     return (
       <Html lang="it">
         <Head>
-          <link href={configuration.fontString} rel="stylesheet" />
+          {configuration.fontString.length >  0 && <link href={configuration.fontString} rel="stylesheet" />}
           <link rel="shortcut icon" href="/icons/slot_bar_icon.svg" />
           <meta name="google-site-verification" content="M8eO4mYEdHHtKpSYgGOeXo-E-kFAfOmFMUwmaii2bkM" />
           {configuration.youtubeMetatag && <meta name="google-site-verification" content={configuration.youtubeMetatag} />}

@@ -9,13 +9,27 @@ export interface Config {
     youtubeMetatag? : string
 }
 
-export const configuration : Config = {
+export const defaultConfig : Config = {
     streamerId : 5,
     streamerName : 'casinosquad',
     api : 'https://compare.topadsservices.com',
     primaryColor : '#2b2b2b',
     secondaryColor : '#e1b96e',
-    fontString : "https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap",
-    font : 'Turret Road',
+    fontString : "",
+    font : `'Roboto', sans-serif`,
+}
+
+export let configuration : Config = {
+    streamerId : 5,
+    streamerName : 'casinosquad',
+    api : 'https://compare.topadsservices.com',
+    primaryColor : '#2b2b2b',
+    secondaryColor : '#e1b96e',
+    fontString : "",
+    font : `'Roboto', sans-serif`,
+}
+
+export const setConfigurationFile = (newConfig  : Config = configuration) => {
+    configuration = newConfig
 }
 
