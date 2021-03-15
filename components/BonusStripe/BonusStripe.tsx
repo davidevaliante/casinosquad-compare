@@ -33,7 +33,8 @@ const BonusStripe: FunctionComponent<Props> = ({ bonus, eng = false, countryCode
         // if(linkToOpen.includes('admiral')) Router.push('/visita/admiralyes')
         // window.open(extractLink())
 
-        Router.push(`/visita/${bonus.compareCode}/${countryCode}`)
+        // Router.push(`/visita/${bonus.compareCode}/${countryCode}`)
+        window.open(`https://casinosquad.toply.info/visita/${bonus.compareCode}/${countryCode}`)
     }
 
     const extractNoDepositText = () => {
