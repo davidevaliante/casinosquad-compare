@@ -35,9 +35,7 @@ const index : FunctionComponent<Props> = ({streamerData}) => {
     }, [])
 
     const geoLocate = async () => {
-        const geolocation = await axios.get('https://ipapi.co/json/')
-        const { country_code } = geolocation.data
-        if(country_code) setCountry(lowerCase(country_code))
+        setCountry('it')
     }
 
     const getBonusList = async () => {
