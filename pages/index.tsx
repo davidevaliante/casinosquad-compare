@@ -36,10 +36,13 @@ const index: FunctionComponent<Props> = ({ streamerData }) => {
   }, []);
 
   const geoLocate = async () => {
-    setCountry("it");
+    const userCountryRequest = await axios.get(configuration.geoApi);
+    const countryCode = lowerCase(userCountryRequest.data.country_code2);
+    setCountry(countryCode);
   };
 
   const getBonusList = async () => {
+    console.log(`started at ${new Date().getTime()}`);
     let bonusForCountry = streamerData.countryBonusList.filter(
       (it) => it.label === country
     );
@@ -101,7 +104,11 @@ const index: FunctionComponent<Props> = ({ streamerData }) => {
           <img className="logo" src="/icons/app_icon.png" />
         </div>
 
-        <h1>Migliori casinò legali dove trovare questi giochi:</h1>
+        <h1>
+          {country === "it"
+            ? "Migliori casinò legali dove trovare questi giochi:"
+            : "Best Casino to play this games"}
+        </h1>
 
         {bonuses &&
           bonuses.length > 2 &&
