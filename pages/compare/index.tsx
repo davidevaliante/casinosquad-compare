@@ -87,7 +87,7 @@ const Compare: FunctionComponent<Props> = ({ streamerData, bonusToShow }) => {
           ))}
 
         <div style={{ padding: "1rem" }}>
-          <VideoDiscalimer />
+          <VideoDiscalimer countryCode={country} />
         </div>
         <div className="bottom">
           <p style={{ textAlign: "center" }}>
