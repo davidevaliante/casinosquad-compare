@@ -182,7 +182,8 @@ const Row = styled.div`
   align-items: center;
   flex-grow: 1;
   margin-bottom: 1rem;
-  width: 280px;
+  max-width: 280px;
+  min-width: 280px;
 
   ${desktop} {
     margin-bottom: 0rem;
@@ -208,8 +209,8 @@ const RowDeposit = styled.div`
   flex-grow: 1;
   padding: 0.5rem;
   margin-top: 0.4rem;
-
   margin-bottom: 1rem;
+  max-width: 400px;
 
   ${desktop} {
     margin-bottom: 0rem;
