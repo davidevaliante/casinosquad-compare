@@ -97,6 +97,63 @@ const index: FunctionComponent<Props> = ({ streamerData }) => {
 	// }
 
 	if (loading) return <FullPageLoader />
+	if (country !== 'it' && country !== 'mt')
+		return (
+			<Wrapper>
+				<Container>
+					<div className='top-bar' style={{ cursor: 'pointer' }}>
+						<img className='logo' src='/icons/app_icon.png' />
+					</div>
+
+					<div>
+						<h1>More Related Videos you can find on YouTube :</h1>
+
+						<div
+							style={{
+								display: 'flex',
+								flexDirection: 'column',
+								alignItems: 'center',
+								paddingBottom: '4rem',
+								paddingTop: '1rem',
+								gap: '2rem',
+							}}
+						>
+							<iframe
+								width='853'
+								height='480'
+								src={`https://www.youtube.com/embed/LzY0clEyWcs`}
+								frameBorder='0'
+								allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+								allowFullScreen
+								title='Embedded youtube'
+							/>
+
+							<iframe
+								width='853'
+								height='480'
+								src={`https://www.youtube.com/embed/fKhVbdRAbL0`}
+								frameBorder='0'
+								allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+								allowFullScreen
+								title='Embedded youtube'
+							/>
+
+							<iframe
+								width='853'
+								height='480'
+								src={`https://www.youtube.com/embed/k04XjP_BUP8`}
+								frameBorder='0'
+								allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+								allowFullScreen
+								title='Embedded youtube'
+							/>
+
+							<VideoDiscalimer countryCode={country} />
+						</div>
+					</div>
+				</Container>
+			</Wrapper>
+		)
 	return (
 		<Wrapper>
 			<Container>
