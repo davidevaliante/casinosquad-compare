@@ -98,6 +98,7 @@ const index: FunctionComponent<Props> = ({ streamerData }) => {
 
 	if (loading) return <FullPageLoader />
 	if (country !== 'it' && country !== 'mt')
+		// if (country === 'it')
 		return (
 			<Wrapper>
 				<Container>
@@ -106,49 +107,37 @@ const index: FunctionComponent<Props> = ({ streamerData }) => {
 					</div>
 
 					<div>
-						<h1>More Related Videos you can find on YouTube :</h1>
-
-						<div
-							style={{
-								display: 'flex',
-								flexDirection: 'column',
-								alignItems: 'center',
-								paddingBottom: '4rem',
-								paddingTop: '1rem',
-								gap: '2rem',
-							}}
-						>
+						<h1 style={{ margin: '1rem 0rem' }}>
+							Watch more YouTube videos :
+						</h1>
+						<div className='rwd-video'>
 							<iframe
-								width='853'
-								height='480'
 								src={`https://www.youtube.com/embed/LzY0clEyWcs`}
-								frameBorder='0'
-								allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
 								allowFullScreen
-								title='Embedded youtube'
+								frameBorder='0'
+								height='315'
+								width='560'
 							/>
+						</div>
 
+						<div className='rwd-video'>
 							<iframe
-								width='853'
-								height='480'
 								src={`https://www.youtube.com/embed/fKhVbdRAbL0`}
-								frameBorder='0'
-								allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
 								allowFullScreen
-								title='Embedded youtube'
+								frameBorder='0'
+								height='315'
+								width='560'
 							/>
+						</div>
 
+						<div className='rwd-video'>
 							<iframe
-								width='853'
-								height='480'
 								src={`https://www.youtube.com/embed/k04XjP_BUP8`}
-								frameBorder='0'
-								allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
 								allowFullScreen
-								title='Embedded youtube'
+								frameBorder='0'
+								height='315'
+								width='560'
 							/>
-
-							<VideoDiscalimer countryCode={country} />
 						</div>
 					</div>
 				</Container>
