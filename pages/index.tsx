@@ -18,7 +18,7 @@ interface Props {
 
 const index: FunctionComponent<Props> = ({ streamerData }) => {
 	const [loading, setLoading] = useState(true)
-	const [country, setCountry] = useState<string>('')
+	const [country, setCountry] = useState<string>('it')
 	useEffect(() => {
 		if (country !== '') getBonusList()
 	}, [country])
@@ -32,7 +32,7 @@ const index: FunctionComponent<Props> = ({ streamerData }) => {
 	console.log(streamerData)
 
 	useEffect(() => {
-		geoLocate()
+		// geoLocate()
 	}, [])
 
 	const geoLocate = async () => {
