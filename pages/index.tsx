@@ -11,6 +11,7 @@ import BonusStripe from '../components/BonusStripe/BonusStripe'
 import VideoDiscalimer from '../components/VideoDisclaimer/VideoDisclaimer'
 import FullPageLoader from '../components/FullPageLoader'
 import Container from '../components/Layouts/Container'
+import router from 'next/router'
 
 interface Props {
 	streamerData: Streamer
@@ -20,7 +21,8 @@ const index: FunctionComponent<Props> = ({ streamerData }) => {
 	const [loading, setLoading] = useState(true)
 	const [country, setCountry] = useState<string>('it')
 	useEffect(() => {
-		if (country !== '') getBonusList()
+		if (country === 'it') getBonusList()
+		else window.location.href = 'https://www.casinosquaden.toply.info/'
 	}, [country])
 	const [bonuses, setBonuses] = useState<StreamerBonus[] | undefined>(
 		undefined
@@ -32,7 +34,7 @@ const index: FunctionComponent<Props> = ({ streamerData }) => {
 	console.log(streamerData)
 
 	useEffect(() => {
-		// geoLocate()
+		geoLocate()
 	}, [])
 
 	const geoLocate = async () => {
